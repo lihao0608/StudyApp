@@ -21,6 +21,12 @@ android {
         }
     }
 
+
+}
+
+task a{
+
+    println 'this is task A'
 }
 
 dependencies {

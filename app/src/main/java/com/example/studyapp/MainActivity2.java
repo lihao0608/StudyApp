@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.studyapp.thread.WaitNotifyExample;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class MainActivity2 extends AppCompatActivity {
-
+    Queue<Integer> queue1;
+    Queue<Integer> queue2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
 //        WaitNotifyExample example = new WaitNotifyExample();
 //        executorService.execute(() -> example.after());
 //        executorService.execute(() -> example.before());
+        queue1 = new LinkedList<Integer>();
+        queue2 = new LinkedList<Integer>();
     }
 }

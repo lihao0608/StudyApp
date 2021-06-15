@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       startActivity(new Intent(MainActivity.this,MainActivity2.class));
+//       startActivity(new Intent(MainActivity.this,MainActivity2.class));
 
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
 
 //        Math.pow()
 
