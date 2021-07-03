@@ -15,5 +15,13 @@ class KotlinDemoActivity : AppCompatActivity() {
         println("intValue value is $intValue") //intValue value is 100
         //也可以包含表达式
         println("(intValue + 100) value is ${intValue + 100}")   //(intValue + 100) value is 200
+
+
+
+
+
+
+
+
     }
 }
