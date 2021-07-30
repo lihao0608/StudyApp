@@ -21,5 +21,15 @@ public class MainActivity2 extends AppCompatActivity {
 //        executorService.execute(() -> example.before());
         queue1 = new LinkedList<Integer>();
         queue2 = new LinkedList<Integer>();
+
+//        测试错误1
+
+
+
+
+
+
+
+
     }
 }
