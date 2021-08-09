@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import com.example.studyapp.java.A;
+import com.example.studyapp.java.Amanger;
+
 import org.greenrobot.eventbus.EventBus;
 
 import java.lang.reflect.Array;
@@ -25,27 +28,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> arrayList=new ArrayList<>();
 //        arrayList.get()
         ArrayMap<String,String> arrayMap=new ArrayMap<>();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //       startActivity(new Intent(MainActivity.this,MainActivity2.class));
