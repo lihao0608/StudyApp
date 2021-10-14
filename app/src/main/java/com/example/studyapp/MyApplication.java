@@ -9,6 +9,7 @@ import android.app.Application;
  */
 public class MyApplication extends Application {
 
+    private static Application INSTANCE;
     @Override
     public void onLowMemory() {
         super.onLowMemory();
@@ -19,4 +20,13 @@ public class MyApplication extends Application {
         super.onTrimMemory(level);
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        INSTANCE=this;
+    }
+
+   public static Application getappContext(){
+        return INSTANCE;
+   }
 }

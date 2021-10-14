@@ -2,13 +2,19 @@ package com.example.studyapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.studyapp.java.A;
 import com.example.studyapp.java.Amanger;
+import com.example.studyapp.java.Callback;
+import com.example.studyapp.java.CallbackIml;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -16,9 +22,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+//    private TextView mTextView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
         int[][] matrix={{1,2,3,4},{4,5,6,7},{8,9,10,11},{12,13,14,15}};
         spiralOrder(matrix);
         Log.d("TAG", "onCreate: "+ Arrays.toString(spiralOrder(matrix)));
+
+        int a=1;
+        double b=a;
+        Log.d("11111111111111111", "onCreate: "+b);
+
+        PackageManager pm = getPackageManager();
+//        List<PackageInfo> installedPackages = pm.getInstalledPackages();
+
+        setCallBack(new CallbackIml());
+
+    }
+
+    void setCallBack(Callback callback){
+        if (callback instanceof CallbackIml){
+
+        }
+
     }
 
 
@@ -76,4 +101,35 @@ public class MainActivity extends AppCompatActivity {
         }
         return res;
     }
+
+
+
+//    private static List<PackageInfo> forceGetPackageList(Context context) {
+//        PackageManager pm = context.getPackageManager();
+//        List<PackageInfo> mList = new ArrayList<>();
+//
+//        //系统应用uid从1000开始，用户应用uid从10000(FIRST_APPLICATION_UID)开始，直接合并查询
+//        for (int i = Process.SYSTEM_UID; i <= Process.LAST_APPLICATION_UID; i++) {
+//            String[] apps = null;
+//            try {
+//                apps = pm.getPackagesForUid(i);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            if (apps != null) {
+//                for (String app : apps) {
+//                    try {
+//                        PackageInfo info = pm.getPackageInfo(app, 0);
+//                        if (info != null) {
+//                            mList.add(info);
+//                        }
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        }
+//        return mList;
+//    }
+
 }
